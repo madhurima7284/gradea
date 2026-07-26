@@ -1,0 +1,6 @@
+{
+  "name": "GradeInsight",
+  "description": "Analyze your academic performance instantly using marks, grades, or semester result PDFs.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

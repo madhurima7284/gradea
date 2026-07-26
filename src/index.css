@@ -1,0 +1,114 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-warm-cream: #FAF7F2;
+    --bg-ivory: #FDFBF8;
+    --bg-card: #FFFFFF;
+    --border-beige: #EAE4DC;
+    --accent-sage: #8AAE92;
+    --accent-sage-hover: #789C7E;
+    --accent-dusty-blue: #7C9DC5;
+    --accent-terracotta: #D7A98C;
+    --status-success: #7FB77E;
+    --status-warning: #D8A657;
+    --status-error: #D98C8C;
+    --text-primary: #2D2A26;
+    --text-secondary: #6E685F;
+    --text-muted: #9E978E;
+
+    --font-serif: 'Instrument Serif', 'Fraunces', Georgia, serif;
+    --font-sans: 'Geist', 'Inter', 'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+
+  .dark {
+    --bg-warm-cream: #1C1A17;
+    --bg-ivory: #221F1C;
+    --bg-card: #282521;
+    --border-beige: #3B3630;
+    --accent-sage: #93B89B;
+    --accent-sage-hover: #82A98A;
+    --accent-dusty-blue: #8AAECF;
+    --accent-terracotta: #E2B79A;
+    --status-success: #88C487;
+    --status-warning: #E0B367;
+    --status-error: #E09999;
+    --text-primary: #FAF7F2;
+    --text-secondary: #BDB6AC;
+    --text-muted: #807A72;
+  }
+}
+
+.font-serif-title {
+  font-family: 'Instrument Serif', 'Fraunces', Georgia, serif;
+}
+
+.font-sans-body {
+  font-family: 'Geist', 'Inter', 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+/* Subtle 1px Notebook / Paper Grid Background Pattern (3-5% opacity) */
+.bg-notebook-grid {
+  background-size: 28px 28px;
+  background-image: 
+    linear-gradient(to right, rgba(138, 115, 95, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(138, 115, 95, 0.05) 1px, transparent 1px);
+}
+
+.dark .bg-notebook-grid {
+  background-size: 28px 28px;
+  background-image: 
+    linear-gradient(to right, rgba(237, 232, 225, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(237, 232, 225, 0.035) 1px, transparent 1px);
+}
+
+/* Glassmorphism subtle effects for warm theme */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid #EAE4DC;
+}
+
+.dark .glass-panel {
+  background: rgba(40, 37, 33, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid #3B3630;
+}
+
+/* Custom Soft Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(138, 115, 95, 0.2);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(138, 115, 95, 0.35);
+}
+
+/* Print Styles for Reports */
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  .print-container {
+    padding: 0 !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+}
